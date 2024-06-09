@@ -19,9 +19,9 @@ $(document).ready(function() {
             return;  
         }  
   
-        // 检查密码是否至少包含6个字符  
-        if (password.length < 6) {  
-            alert('密码必须至少包含6个字符');  
+        // 检查密码是否至少包含8个字符  
+        if (password.length < 8 ||!/[A-Z]/.test(password) || !/[a-z]/.test(password) || !/[0-9]/.test(password) || !/[!@#$%^&*]/.test(password)) {  
+            alert('密码长度至少为8个字符，且必须包含大写字母、小写字母、数字和特殊字符！');  
             return;  
         }  
   
